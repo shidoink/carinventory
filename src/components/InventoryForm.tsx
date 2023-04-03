@@ -5,7 +5,7 @@ import {useDispatch, useStore} from 'react-redux'
 import { chooseMake, chooseHorsePower, chooseModel, chooseValue, chooseYear } from '../redux/slices/RootSlice'
 
 interface InventoryFormProps{
-    id?: string
+    id?: string[]
 }
 
 const InventoryForm = ( props: InventoryFormProps) => {
@@ -14,10 +14,11 @@ const InventoryForm = ( props: InventoryFormProps) => {
     const store = useStore();
 
 const onSubmit = ( data: any, event:any)=>{
-    console.log(`ID: ${typeof props.id}`);
+    console.log(`ID: ${props.id}`);
     if (props.id && props.id.length>0){
         server_calls.update(props.id[0], data)
-        console.log(`Updated: ${data.name} ${props.id}`)
+        setTimeout(()=>{window.location.reload()},1000)
+        console.log(`Updated: ${data.make} ${props.id}`)
         setTimeout(()=>{window.location.reload()},1000)
         event.target.reset()
     } else {

@@ -16,7 +16,10 @@ const AuthChecker = ({children}: Props) => {
         }
     },[])
   return (
-    <>{children}</>
+    
+    <>
+    {children}</>
+    
   )
 }
 

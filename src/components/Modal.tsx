@@ -1,7 +1,7 @@
 import InventoryForm from './InventoryForm';
 
 type Props = {
-    id?: string;
+    id?: string[];
     open: boolean;
     onClose: ()=> void;
 }

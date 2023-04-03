@@ -55,6 +55,7 @@ const deleteData= ()=>{
             className='p-3 m-4 bg-slate-300 rounded hover:bg-slate-800 text-white'>
                 Add Inventory
             </button>
+        </div>
             <button
             onClick= {handleOpen}
             className='p-3 m-4 bg-slate-300 rounded hover:bg-slate-800 text-white'>
@@ -65,6 +66,7 @@ const deleteData= ()=>{
             className='p-3 m-4 bg-slate-300 rounded hover:bg-slate-800 text-white'>
                 Delete Inventory
             </button>
+        </div>
             <div className={ open ? "hidden": "container mx-10 my-5 flex flex-col"}
                 style = {{height: 400, width: '100%'}}>
                     <h2 className=" p-3 bg-slate-300 my-2 rounded ">Inventory</h2>
@@ -75,8 +77,6 @@ const deleteData= ()=>{
                     }}
                     />
             </div>
-        </div>
-     </div>
     </>
   )
 }
